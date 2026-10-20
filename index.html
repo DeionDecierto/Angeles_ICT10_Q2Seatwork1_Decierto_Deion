@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SS Club Membership</title>
+    
+    <link rel="stylesheet" href="https://pyscript.net/releases/2024.1.1/core.css">
+    <script type="module" src="https://pyscript.net/releases/2024.1.1/core.js"></script>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: radial-gradient(circle, #5c3a21 0%, #221307 70%, #0d0703 100%);
+            color: #333;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        .container {
+            background: #fff;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            width: 350px;
+            text-align: center;
+        }
+
+        .logo-container {
+            margin-bottom: 20px;
+            display: flex;
+            justify-content: center;
+        }
+
+        .logo-container img {
+            width: 140px;
+            height: 140px;
+            object-fit: cover;
+            border-radius: 4px; 
+            border: 1px solid #ccc;
+            background-color: #f9f9f9;
+        }
+
+        h1 {
+            margin-top: 0;
+            font-size: 24px;
+            color: #2c3e50;
+        }
+
+        .subtitle {
+            font-size: 14px;
+            color: #7f8c8d;
+            margin-bottom: 20px;
+        }
+
+        .input-group {
+            margin-bottom: 15px;
+            text-align: left;
+        }
+
+        label {
+            display: block;
+            font-size: 13px;
+            font-weight: bold;
+            margin-bottom: 5px;
+            color: #34495e;
+        }
+
+        input[type="text"] {
+            width: 100%;
+            padding: 8px 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            font-size: 14px;
+            box-sizing: border-box;
+        }
+
+        input[type="text"]:focus {
+            border-color: #3498db;
+            outline: none;
+        }
+
+        button {
+            background: #2c3e50;
+            color: #fff;
+            border: none;
+            padding: 10px;
+            font-size: 14px;
+            font-weight: bold;
+            border-radius: 4px;
+            cursor: pointer;
+            width: 100%;
+            margin-top: 10px;
+        }
+
+        button:hover {
+            background: #34495e;
+        }
+
+        #result-area {
+            margin-top: 20px;
+            padding: 12px;
+            border-radius: 4px;
+            font-size: 14px;
+            background: #ecf0f1;
+            border: 1px solid #bdc3c7;
+            text-align: left;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        
+        <div class="logo-container">
+            <img src="Logo.jpg" >
+        </div>
+
+        <h1>SS Club</h1>
+        <div class="subtitle">Social Studies Member Verification</div>
+
+        <div class="input-group">
+            <label for="first-name">First Name</label>
+            <input type="text" id="first-name">
+        </div>
+
+        <div class="input-group">
+            <label for="last-name">Last Name</label>
+            <input type="text" id="last-name">
+        </div>
+
+        <button py-click="check_membership">Verify For Membership</button>
+
+        <div id="result-area">Enter your name above to check status.</div>
+    </div>
+
+    <script type="py" src="main.py"></script>
+
+</body>
+</html>
